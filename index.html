@@ -8,26 +8,26 @@
   <body>
     Sliding
     <div id="wrapper">
-      <div class="active_buttons">
-        <button id="thirty" class="btn">30 days</button>
-        <button id="sixty" class="btn">60 days</button>
-        <button id="ninety" class="btn">90 days</button>
-      </div>
-      <div class="container_two">
+      <div class="container_left">
+        <h1>Choose the period</h1>
+        <div class="active_buttons">
+          <button id="thirty" class="btn">30 days</button>
+          <button id="sixty" class="btn">60 days</button>
+          <button id="ninety" class="btn">90 days</button>
+        </div>
+        <h1>Invoice Amount</h1>
         <div class="slider-container">
           <div id="slider-1"></div>
-          <label for="slider-1">50000</label>
+          <label for="slider-1" class="label-left">500</label>
+          <label for="slider-1" class="label-right">50,000</label>
         </div>
-        <div class="values">
-          <h2>Invoice sum:</h2>
-          <div id="value">1000</div>
-          <h2>Costs after tax:</h2>
-          <div id="post-tax">2000</div>
-        </div>
+        <h1 id="value" class="value_invoice">1000</h1>
       </div>
-      <div class="payout_container">
+      <div class="values">
         <h2>How much you receive:</h2>
-        <div id="payout">12000</div>
+        <h1 id="payout">12000</h1>
+        <h2>Costs after tax:</h2>
+        <h1 id="post-tax">2000</h1>
       </div>
     </div>
   </body>

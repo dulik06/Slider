@@ -5,15 +5,53 @@
   flex-wrap: wrap;
 }
 
-.container_two {
+.container_left {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
   align-items: center;
 }
 
 .slider-container {
   width: 600px;
+  margin-bottom: 10px;
+}
+
+.active_buttons {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+
+.values {
+  background: #5a2396;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px 30px 40px;
+  width: 300px;
+  box-shadow:0px 0px 4px 0px #5a2396;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 1px 1px 2px;
+  border-radius: 3px;
+}
+
+.value_invoice{
+  color: #3cb0fd;
+}
+
+.label-left{
+  left: 390px;
+  top: 328px;
+  position: absolute;
+}
+
+.label-right {
+  right: 370px;
+  top: 328px;
+  position: absolute;
 }
 
 #slider-1 .ui-slider-range {
@@ -42,17 +80,6 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
 }
 
-.values {
-  background: #5a2396;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 40px 30px 40px;
-  width: 300px;
-  box-shadow:0px 0px 4px 0px #5a2396;
-  color: white;
-  text-shadow: rgb(0, 0, 0) 1px 1px 2px;
-  border-radius: 3px;
-}
 
 
 .btn {
@@ -63,7 +90,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   font-family: Arial;
   color: #ffffff;
   font-size: 20px;
-  background: #3cb0fd;
+  background: rgb(0, 80, 170);
   padding: 10px 15px 10px 15px;
   text-decoration: none;
   border: 2px solid #fff;
@@ -91,15 +118,19 @@ button.btn:active{
     background:linear-gradient(to bottom, #3cb0fd, #5a2396);
 }
 
-.active_buttons {
-  display: flex;
-  justify-content: center;
-  width: 600px;
-}
 
 .payout_container{
   background: #3cb0fd;
   color: white;
   width: 400px;
   text-align: center;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px 0px #3cb0fd;
+  padding: 10px 40px 30px 40px;
+}
+
+.blue_container {
+  width: 600px;
+  display: flex;
+  justify-content: center;
 }

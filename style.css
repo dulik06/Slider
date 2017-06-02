@@ -1,9 +1,5 @@
-body {
-  color: rgba(10,0,1,0.63);
-  font-family: "FF Mark", Helvetica, Arial, sans-serif;
-}
 
-span {
+.general {
   font-size: 20px;
   line-height: 20px;
   font-weight: 300;
@@ -11,6 +7,8 @@ span {
 
 #wrapper {
   padding: 50px;
+  font-family: "FF Mark", Helvetica, Arial, sans-serif;
+  color: rgba(10,0,1,0.63);
   background:  ;
   display: flex;
   flex-wrap: wrap;
@@ -132,6 +130,7 @@ input[type='radio']:checked:after {
 /********* jQuery classes *********/
 #slider-1 .ui-slider-range {
   background:linear-gradient(to right, #3cb0fd, #5a2396);
+  /*background:linear-gradient(to right, #3cb0fd, #5a2396);*/
 }
 
 #slider-1 {

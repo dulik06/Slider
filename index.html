@@ -4,24 +4,24 @@
       <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,intl"></script>
   </head>
   <body>
-    Sliding
     <div id="wrapper">
       <div class="">
         <div class="container-upper">
           <div class="invoice_amount">
-            <span>Invoice Amount</span>
-            <h1 id="value" class="value_invoice">1,000</h1>
+            <span class="general">Invoice Amount</span>
+            <h1 id="value" class="value_invoice"></h1>
           </div>
           <div class="slider-container">
             <div id="slider-1">
               <label for="slider-1" class="label-left">500</label>
-              <label for="slider-1" class="label-right">50,000</label>
+              <label for="slider-1" class="label-right">50000</label>
             </div>
           </div>
           <div class="days_container">
-            <span>I need money for:</span>
+            <span class="general">I need money for:</span>
             <br>
             <form action="form_container">
               <input type="radio" name="days" value="thirty" id="thirty" checked="checked"><span class="days_text">30 days</span><br>
@@ -32,27 +32,18 @@
         </div>
         <div class="values_container">
           <div class="values" id="value-1">
-            <span>You receive:</span>
-            <h1 id="payout">12,000</h1>
+            <span class="general">You receive:</span>
+            <h1 id="payout"></h1>
           </div>
           <div class="values" id="value-2">
-            <span>Total cost:</span>
-            <h1 id="total-cost">2,000</h1>
+            <span class="general">Total cost:</span>
+            <h1 id="total-cost"></h1>
           </div>
           <div class="values" id="value-3">
-            <span>Costs after tax:</span>
-            <h1 id="post-tax">2,000</h1>
+            <span class="general">Costs after tax:</span>
+            <h1 id="post-tax"></h1>
           </div>
         </div>
-
-        <!--<div class="values">
-          <span>You receive:</span>
-          <h1 id="payout">12000</h1>
-          <span>Total cost:</span>
-          <h1 id="total-cost">2000</h1>
-          <span>Costs after tax:</span>
-          <h1 id="post-tax">2000</h1>
-        </div> -->
       </div>
     </div>
   </body>

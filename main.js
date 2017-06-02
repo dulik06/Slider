@@ -1,6 +1,13 @@
-(function () {
-
+(function (locale, currency) {
+  var defaultValue = 10000;
   var paybackDays = 30;
+
+  setFormValues(defaultValue);
+
+  function setFormValues(value) {
+    $("#value").html(formatCurrency(value));
+    updatePayout(value);
+  }
 
   function calculatePrice(value) {
     switch (paybackDays) {
@@ -11,21 +18,29 @@
     }
   }
 
+  function formatCurrency(value) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  }
+
   function updatePayout(value) {
-    $("#payout").html(calculatePrice(value).toLocaleString());
-    $("#post-tax").html(calculatePrice((value) * 1.2).toLocaleString());
-    $("#total-cost").html(calculatePrice((value) * 1.6).toLocaleString());
+    var calculatedCosts = calculatePrice(value);
+
+    $("#payout").html(formatCurrency(calculatedCosts));
+    $("#post-tax").html(formatCurrency(calculatedCosts * 1.2));
+    $("#total-cost").html(formatCurrency(calculatedCosts * 1.6));
   }
 
   $('#slider-1').slider({
     min: 500,
     max: 50000,
-    value: 10000,
+    value: defaultValue,
     step: 100,
     range: "min",
     slide: function (event, ui) {
-      $("#value").html((ui.value).toLocaleString());
-      updatePayout(ui.value);
+      setFormValues(ui.value);
     }
   });
 
@@ -41,30 +56,4 @@
       updatePayout($("#slider-1").slider("value"));
     }
   });
-  })();
-
-  /*$('#thirty').attr('checked', 'true')(function () {
-    paybackDays = 30;
-    updatePayout($("#slider-1").slider("value"));
-  });
-  $('#sixty').click(function () {
-    paybackDays = 60;
-    updatePayout($("#slider-1").slider("value"));
-  });
-  $('#ninety').click(function () {
-    paybackDays = 90;
-    updatePayout($("#slider-1").slider("value"));
-  });
-  $('#submit').click(function () {
-    var sliderValue = $("#slider1").slider("value");
-    var price = calculatePrice(sliderValue);
-    var priceWithVAT = price * 1.2;
-
-    $.ajax({});
-  });*/
-
-
-/*$(".btn").click(function(){
-        $(".btn").removeClass('active');
-        $(this).addClass('active');
-});*/
+})("pl-PL", "PLN");

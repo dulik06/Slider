@@ -1,65 +1,142 @@
+body {
+  color: rgba(10,0,1,0.63);
+  font-family: "FF Mark", Helvetica, Arial, sans-serif;
+}
+
+span {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
 #wrapper {
   padding: 50px;
-  background: #f9f9f9;
-  display: felx;
-  flex-wrap: wrap;
-}
-
-.container_left {
+  background:  ;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 100px;
-  align-items: center;
 }
 
+.container-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+}
+
+.form_container {
+  font-weight: 300;
+}
+
+.invoice_amount{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  top: 25px;
+  position: absolute;
+}
 .slider-container {
   width: 600px;
   margin-bottom: 10px;
 }
 
-.active_buttons {
-  display: flex;
-  justify-content: center;
-  width: 600px;
-  margin-bottom: 50px;
-}
-
-
-.values {
-  background: #5a2396;
+.days_container {
   display: flex;
   flex-direction: column;
-  padding: 10px 40px 30px 40px;
-  width: 300px;
-  box-shadow:0px 0px 4px 0px #5a2396;
-  color: white;
-  text-shadow: rgb(0, 0, 0) 1px 1px 2px;
-  border-radius: 3px;
 }
 
-.value_invoice{
-  color: #3cb0fd;
+label {
+  padding: 0 2px;
+  opacity: .4;
+  color: #000;
+  font-size: 9px;
+  line-height: 12px;
 }
 
 .label-left{
-  left: 390px;
-  top: 328px;
   position: absolute;
+  left: 0px;
+  top: -18px;
 }
 
 .label-right {
-  right: 370px;
-  top: 328px;
   position: absolute;
+  right: 0px;
+  top: -18px;
 }
 
+.value_invoice{
+  color: #5a2396;
+  margin-left: 150px;
+}
+
+.values_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 0px 40px;
+  width: 150px;
+  box-shadow:0px 0px 4px 0px #5a2396;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+#value-3 {
+  margin-left: auto;
+  background: #5a2396;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 1px 1px 2px;
+}
+
+#value-2, #value-1 {
+  border: solid 2px #5a2396;
+  color: #5a2396;
+}
+
+#value-2 {
+  margin-left: 20px;
+}
+
+/********* Radio buttons *********/
+
+input[type='radio']:after {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    top: -3px;
+    left: -2px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #5a2396;
+}
+
+input[type='radio']:checked:after {
+    background-color: rgb(0, 215, 255);
+}
+
+.days_text {
+  font-size: 16px ;
+  margin-left: 5px;
+}
+
+
+/********* jQuery classes *********/
 #slider-1 .ui-slider-range {
   background:linear-gradient(to right, #3cb0fd, #5a2396);
 }
 
 #slider-1 {
   background: silver;
+  position: relative;
 }
 
 div#slider-1 {
@@ -69,7 +146,7 @@ div#slider-1 {
 
 #slider-1 .ui-slider-handle {
   border-color: transparent;
-  background: url(oval.svg);
+  background: url(oval-blue.svg);
   background-repeat: no-repeat;
   height: 30px;
   width: 30px;
@@ -80,9 +157,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
 }
 
-
-
-.btn {
+/*.btn {
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
   border-radius: 6px;
@@ -118,7 +193,12 @@ button.btn:active{
     background:linear-gradient(to bottom, #3cb0fd, #5a2396);
 }
 
-
+.active_buttons {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin-bottom: 50px;
+}
 .payout_container{
   background: #3cb0fd;
   color: white;
@@ -134,3 +214,4 @@ button.btn:active{
   display: flex;
   justify-content: center;
 }
+*/

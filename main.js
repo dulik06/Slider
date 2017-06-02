@@ -12,8 +12,9 @@
   }
 
   function updatePayout(value) {
-    $("#payout").html(calculatePrice(value));
-    $("#post-tax").html(calculatePrice(value) * 1.2);
+    $("#payout").html(calculatePrice(value).toLocaleString());
+    $("#post-tax").html(calculatePrice((value) * 1.2).toLocaleString());
+    $("#total-cost").html(calculatePrice((value) * 1.6).toLocaleString());
   }
 
   $('#slider-1').slider({
@@ -23,12 +24,26 @@
     step: 100,
     range: "min",
     slide: function (event, ui) {
-      $("#value").html(ui.value);
+      $("#value").html((ui.value).toLocaleString());
       updatePayout(ui.value);
     }
   });
 
-  $('#thirty').click(function () {
+  $('input:radio[name="days"]').change(function(){
+    if ($(this).val() == 'thirty'){
+      paybackDays = 30;
+      updatePayout($("#slider-1").slider("value"));
+    } else if($(this).val() == "sixty") {
+      paybackDays = 60;
+      updatePayout($("#slider-1").slider("value"));
+    } else {
+      paybackDays = 90;
+      updatePayout($("#slider-1").slider("value"));
+    }
+  });
+  })();
+
+  /*$('#thirty').attr('checked', 'true')(function () {
     paybackDays = 30;
     updatePayout($("#slider-1").slider("value"));
   });
@@ -46,10 +61,10 @@
     var priceWithVAT = price * 1.2;
 
     $.ajax({});
-  });
-})();
+  });*/
 
-$(".btn").click(function(){
+
+/*$(".btn").click(function(){
         $(".btn").removeClass('active');
         $(this).addClass('active');
-});
+});*/

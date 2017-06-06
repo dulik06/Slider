@@ -1,15 +1,14 @@
-
+@charset "utf-8";
 .general {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 #wrapper {
   padding: 50px;
   font-family: "FF Mark", Helvetica, Arial, sans-serif;
   color: rgba(10,0,1,0.63);
-  background:  ;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,7 +66,6 @@ label {
 }
 
 .value_invoice{
-  color: #5a2396;
   margin-left: 150px;
 }
 
@@ -84,8 +82,6 @@ label {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 20px 40px 0px 40px;
-  width: 150px;
-  box-shadow:0px 0px 4px 0px #5a2396;
   border-radius: 3px;
   justify-content: center;
   align-items: center;
@@ -93,14 +89,13 @@ label {
 
 #value-3 {
   margin-left: auto;
-  background: #5a2396;
+  background: #00d7ff;
   color: white;
-  text-shadow: rgb(0, 0, 0) 1px 1px 2px;
 }
 
 #value-2, #value-1 {
-  border: solid 2px #5a2396;
-  color: #5a2396;
+  border: solid 2px #00d7ff;
+  color: #00d7ff;
 }
 
 #value-2 {
@@ -110,25 +105,28 @@ label {
 /********* Radio buttons *********/
 
 input[type='radio']:after {
-    width: 13px;
-    height: 13px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    top: -3px;
-    left: -2px;
     position: relative;
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 2px solid #5a2396;
+    border: 2px solid #00d7ff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0px rgba(125,125,125,0);
+    
 }
 
 input[type='radio']:checked:after {
-    background-color: rgb(0, 215, 255);
+    background-color: #00d7ff;
+    width: 20px;
+    height: 20px;
 }
 
 .days_text {
   font-size: 16px ;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 
@@ -149,11 +147,11 @@ div#slider-1 {
 
 #slider-1 .ui-slider-handle {
   border-color: transparent;
-  background: url(oval-blue.svg);
+  background: url("https://www.finiata.com/wp-content/uploads/2017/06/slider.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px;
-  top: -10;
+  top: -10px;
 }
 
 span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
@@ -227,3 +225,231 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   }
 
 }
+.general {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+#wrapper {
+  padding: 50px;
+  font-family: "FF Mark", Helvetica, Arial, sans-serif;
+  color: rgba(10,0,1,0.63);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-upper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+}
+
+.form_container {
+  font-weight: 300;
+}
+
+.invoice_amount{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  top: 25px;
+  position: absolute;
+}
+.slider-container {
+  width: 600px;
+  margin-bottom: 10px;
+}
+
+.days_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+label {
+  padding: 0 2px;
+  opacity: .4;
+  color: #000;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+.label-left{
+  position: absolute;
+  left: 0px;
+  top: -18px;
+}
+
+.label-right {
+  position: absolute;
+  right: 0px;
+  top: -18px;
+}
+
+.value_invoice{
+  margin-left: 150px;
+}
+
+.values_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px 40px 0px 40px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+#value-3 {
+  margin-left: auto;
+  background: #00d7ff;
+  color: white;
+}
+
+#value-2, #value-1 {
+  border: solid 2px #00d7ff;
+  color: #00d7ff;
+}
+
+#value-2 {
+  margin-left: 20px;
+}
+
+/********* Radio buttons *********/
+
+input[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #00d7ff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0px rgba(125,125,125,0);
+    
+}
+
+input[type='radio']:checked:after {
+    background-color: #00d7ff;
+    width: 20px;
+    height: 20px;
+}
+
+.days_text {
+  font-size: 16px ;
+  margin-left: 15px;
+}
+
+
+/********* jQuery classes *********/
+#slider-1 .ui-slider-range {
+  background:linear-gradient(to right, #3cb0fd, #5a2396);
+}
+
+#slider-1 {
+  background: silver;
+  position: relative;
+}
+
+div#slider-1 {
+  height: 7px;
+}
+
+
+#slider-1 .ui-slider-handle {
+  border-color: transparent;
+  background: url("https://www.finiata.com/wp-content/uploads/2017/06/slider.svg");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  top: -10px;
+}
+
+span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .container-upper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .invoice_amount {
+    position: relative;
+  }
+
+  .days_container {
+    margin-bottom: 20px;
+  }
+
+  .values_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #value-2 {
+    margin-left: 0px;
+  }
+
+  #value-3 {
+    margin-left: 0px;
+    border: solid 2px #5a2396;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .values {
+    width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .slider-container {
+    width: 490px
+  }
+
+  }
+
+@media (max-width: 530px) {
+  .container-upper {
+    max-width: 400px;
+  }
+
+  .slider-container {
+    width: 380px
+  }
+
+  .values {
+    width: 300px;
+  }
+
+  .invoice_amount {
+    flex-direction: column;
+  }
+
+  .value_invoice {
+    margin-left: 0px;
+  }
+
+}
+/* CSS Document */
+

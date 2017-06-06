@@ -1,3 +1,4 @@
+// JavaScript Document
 (function (locale, currency) {
   var defaultValue = 10000;
   var paybackDays = 30;
@@ -11,9 +12,9 @@
 
   function calculatePrice(value) {
     switch (paybackDays) {
-      case 30: return value * 30;
-      case 60: return value * 60;
-      case 90: return value * 90;
+      case 30: return value * 0.96;
+      case 60: return value * 0.92;
+      case 90: return value * 0.88;
       default: return value;
     }
   }
@@ -29,8 +30,11 @@
     var calculatedCosts = calculatePrice(value);
 
     $("#payout").html(formatCurrency(calculatedCosts));
-    $("#post-tax").html(formatCurrency(calculatedCosts * 1.2));
-    $("#total-cost").html(formatCurrency(calculatedCosts * 1.6));
+    
+    var fee = value-calculatedCosts;
+    
+    $("#post-tax").html(formatCurrency(fee-(fee*0.19)));
+    $("#total-cost").html(formatCurrency(fee));
   }
 
   $('#slider-1').slider({
@@ -57,3 +61,4 @@
     }
   });
 })("pl-PL", "PLN");
+
